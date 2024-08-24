@@ -1,0 +1,26 @@
+# Define students and their marks using dictionaries
+students = {
+    "Student 1": {"Python": 80, "AI": 80, "DSA": 90},
+    "Student 2": {"Python": 75, "AI": 85, "DSA": 95},
+    "Student 3": {"Python": 90, "AI": 70, "DSA": 80}
+}
+
+# Function to calculate the grade based on marks
+def get_grade(mark):
+    if mark >= 90:
+        return 'A'
+    elif mark >= 80:
+        return 'B'
+    elif mark >= 70:
+        return 'C'
+    elif mark >= 60:
+        return 'D'
+    else:
+        return 'F'
+
+# Segregating marks into grades for each student and subject
+for student, subjects in students.items():
+    print(f"\nGrades for {student}:")
+    for subject, mark in subjects.items():
+        grade = get_grade(mark)
+        print(f"{subject}: {mark} -> Grade: {grade}")
